@@ -19,6 +19,7 @@ public class C implements ValueSharer {
 	}
 
 	public void p() {
-		System.out.println(owner.getValue());
+		int c = owner.getValue();
+		System.out.print(c);
 	}
 }

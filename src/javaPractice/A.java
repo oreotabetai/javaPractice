@@ -2,18 +2,18 @@ package javaPractice;
 
 //このクラスの変数をBとCに渡す
 public class A implements ValueOwner {
-	private static int value = 3;
+	private int value = 3;
 
 	public static void main(String[] args) {
 		A a = new A();
 		B b = new B();
 		C c = new C();
 
-		a.setValue(value);
-		System.out.print(a.getValue());
-		b.p();;
-
+		a.setValue(4);
 		a.setSharers(b, c);
+		//BとCで値を変える
+		b.p();
+		c.p();
 
 	}
 
@@ -28,7 +28,7 @@ public class A implements ValueOwner {
 
 	}
 
-	//	ValueSharerインターフェースないの引数をすべてのクラスに
+	//	ValueSharerインターフェースないの引数をすべてのクラスに,子の中身が使える
 	@Override
 	public void setSharers(ValueSharer... sharers) {
 		for (ValueSharer sharer : sharers) {

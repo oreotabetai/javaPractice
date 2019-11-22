@@ -10,6 +10,7 @@ interface ValueOwner extends ValueAccessor{
 	void setSharers(ValueSharer... sharers);
 }
 
+//‚±‚ê‚ðimplement‚·‚é
 interface ValueSharer extends ValueAccessor{
 	void setOwner(ValueOwner owener);
 }
